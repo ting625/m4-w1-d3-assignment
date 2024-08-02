@@ -1,0 +1,65 @@
+@import url(https://fonts.googleapis.com/css?family=Bitter:400,400italic,700);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bitter";
+}
+
+$max-width: 80em;
+
+
+// Colors
+$white: rgb(255, 255, 255);
+$black: rgb(0, 0, 0);
+$black-50: rgba(0, 0, 0, 0.5);
+$black-24: rgba(0, 0, 0, 0.24);
+$dark-blue: rgb(22, 34, 42);
+$medium-blue: rgb(58, 96, 115);
+
+// Fonts
+$font-family-primary: 'Bitter', serif;
+$font-family-icons: 'FontAwesome';
+
+// Main Styles
+.main-wrapper {
+  font-family: $font-family-primary;
+
+  .header {
+    background-color: $dark-blue;
+    text-align: center;
+    padding: 20px;
+
+    h1 {
+      color: $white;
+      font-size: 2em;
+      font-family: $font-family-primary;
+    }
+  }
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+
+    .image-wrapper {
+      margin: 10px;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px $black-24;
+
+      img {
+        width: 300px;
+        height: 284px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.1);
+          box-shadow: 0 4px 8px $black-50;
+        }
+      }
+    }
+  }
+}
